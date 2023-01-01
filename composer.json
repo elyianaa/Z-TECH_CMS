@@ -1,6 +1,6 @@
 {
-    "name": "ozdemirburak/laravel-9-simple-cms",
-    "description": "Simple Laravel 9 CMS (Content Management System) for starters.",
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
     "keywords": ["php", "laravel", "cms"],
     "license": "MIT",
     "type": "project",

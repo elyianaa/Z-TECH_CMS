@@ -60,9 +60,6 @@ return [
         ],
         'index' => 'Dashboard'
     ],
-    'elfinder' => [
-        'index' => 'File Manager',
-    ],
     'page' => [
         'create' => 'Create page',
         'edit'   => 'Edit page',

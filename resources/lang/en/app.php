@@ -15,8 +15,8 @@ return [
         'about'  => 'About Us',
         'follow' => 'Follow Us',
         'latest' => 'Latest Articles',
-        'text'   => 'This is just a simple Laravel CMS with a simple UI to help you make things faster and concentrate on your project\'s logic instead of recreating the boilerplate everytime.',
-        'url'    => 'https://youtube.com'
+        'text'   => 'Z-TECH Content Management System (CMS) is a system that aims to provide accessibility and ease of function for normal everyday users.',
+        'url'    => 'ztechcms.com'
     ],
     'pagination' => [
         'next'     => 'Next &raquo;',
