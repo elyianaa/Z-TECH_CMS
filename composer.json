@@ -14,7 +14,7 @@
         "laracasts/flash": "~3.2.1",
         "laravel/framework": "^9.0",
         "laravel/tinker": "~2.4",
-        "laravel/ui": "~3.0",
+        "laravel/ui": "^4.1",
         "maatwebsite/excel": "^3.1",
         "psr/simple-cache": "2.0",
         "spatie/laravel-analytics": "^4.1.0",

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -22,48 +22,19 @@ class LoginController extends Controller
     use AuthenticatesUsers;
 
     /**
-     * Where to redirect users after login / registration.
+     * Where to redirect users after login.
      *
      * @var string
      */
-    protected $redirectTo = '/admin';
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
+     *
+     * @return void
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'logout']);
-    }
-
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function showLoginForm()
-    {
-        return view('auth.login', ['hasCaptcha' => $this->hasCaptcha()]);
-    }
-
-    /**
-     * @param \Illuminate\Http\Request $request
-     *
-     * @throws \Illuminate\Validation\ValidationException
-     */
-    protected function validateLogin(Request $request): void
-    {
-        $rules = [$this->username() => 'required|string', 'password' => 'required|string'];
-        if ($this->hasCaptcha()) {
-            $rules['g-recaptcha-response'] = 'required|captcha';
-        }
-        $this->validate($request, $rules);
-    }
-
-    /**
-     * @return bool
-     */
-    private function hasCaptcha()
-    {
-        return !empty(env('GOOGLE_NOCAPTCHA_SITEKEY')) && strpos(env('GOOGLE_NOCAPTCHA_SECRET'), 'google') === false;
+        $this->middleware('guest')->except('logout');
     }
 }
-
